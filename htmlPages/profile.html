@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="description" content="DASA states" />
+<meta name="keywords" content="DASA,patient,state " />
+<meta name="author" content="DASA TEAM SWIN" />
+<title> Patient Health Analysis </title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css" integrity="sha384-y3tfxAZXuh4HwSYylfB+J125MxIs6mR5FOHamPBG064zB+AFeWH94NdvaCBm8qnd" crossorigin="anonymous">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    
+ <script>
+    $(document).ready(function(){
+        $("#btnPrev").click(function(){
+            var res=confirm("Are you sure you want to go back?");
+            if(res==true)
+            {
+                return true;
+            }
+                else{
+                    return false;
+                }
+        }
+            );
+        $("#btnNext").click(function(){
+           var flag=false;
+            $("[type=radio]").each(function(){
+                if($(this)[0].checked==true)
+                {
+                   flag=true; 
+                }
+                
+            });
+            if(flag==false)
+            {
+                alert("Atleast Select one option to continue");
+                return false;
+            }
+        });
+    });
+    </script>
+    <body>
+        
+<div class="container">
+	<div class="row">
+		
+        <img class="img-circle log profile-img" src="orangelogo.PNG"/>
+        <h4>DASA Evaluation Tool</h4>
+        
+            </div> 
+    </br>
+        </br>
+            
+        
+        
+        <div class="title">
+            <h4>
+                Select a Patient
+            </h4>
+            
+        </div>
+    </br>
+        </br>
+	 <div class="row" style="align:center; text-align: center">
+        <div style="width:50%;margin-left: auto;margin-right: auto;" border=3>
+      <!--  <div class="col-md-6"> -->
+     
+
+    <div class="funkyradio">
+        <div class="funkyradio-default" width="300px">
+            <input type="radio" id="verbalp" name="radio" value="verbalp"/> 
+            <label class="lblVerbals" for="verbalp"><b>Glen Budge</b></label> <br />
+        </div>
+        
+    <div class="funkyradio-primary">
+            
+    <input type="radio" id="physicalp" name="radio" value="physicalp"/> 
+    <label class="lblVerbals" for="physicalp"><b>Steve Clinton</b></label> <br />
+    </div>
+        <div class="funkyradio-success">
+            <input type="radio" id="verbal" name="radio" value="verbal" />
+    <label class="lblVerbals" for="verbal"><b>Marco Runu</b></label> <br />
+
+        </div>
+        
+        <div class="funkyradio-danger">
+            <input type="radio" id="physicals" name="radio" value="physicals" />
+    <label class="lblVerbals" for="physicals"><b>Ben Gordon</b></label> <br />
+
+        </div>
+        
+        <div class="funkyradio-warning">
+             <input   type="radio" id="physical" name="radio" value="physical"/> 
+    <label class="lblVerbals" for="physical"><b>Fiona Shaw</b></label> <br />
+        </div>
+        
+        <div>
+                 <a type="" href="login.html" id="btnPrev" class="buttonPrev">Back</a>
+                <a type="" href="factors.html" id="btnNext" class="buttonNext">Next</a>
+            <a type="" href="Options.html" id="btnReg" class="buttonReg">Add</a>
+                    
+                    
+                </div>
+      
+        
+        </div>
+  <!--  </div> -->
+</div>
+         </div>
+    
+
+<style>
+    .lblVerbals
+    {
+        background-color: whitesmoke;
+    }
+    .buttonNext {
+   position: absolute;
+        
+        margin-top: 10px;
+        margin-left: 185px;
+        border-radius: 12px;
+       float: right;
+         font-family: Verdana;
+        text-transform: uppercase;
+        outline: 0;
+         background: #ff3300;
+        border-radius: 5px;
+        width: 100px;
+        height: 30px;
+        border: 0;
+        color: #FFFFFF;
+        font-size: 14px;
+        -webkit-transition: all 0.3 ease;
+        transition: all 0.3 ease;
+        cursor: pointer;
+    
+}
+
+    .buttonPrev {
+   position: absolute;
+        margin-top: 10px;        
+        margin-left: 75px;
+        border-radius: 12px;
+       float: right;
+         font-family: Verdana;
+        text-transform: uppercase;
+        outline: 0;
+         background: #ff3300;
+        border-radius: 5px;
+        width: 100px;
+        height: 30px;
+        border: 0;
+        color: #FFFFFF;
+        font-size: 14px;
+        -webkit-transition: all 0.3 ease;
+        transition: all 0.3 ease;
+        cursor: pointer;
+    
+}
+        .buttonReg {
+   position: absolute;
+        margin-top: 10px;        
+        margin-left: 300px;
+        border-radius: 12px;
+       float: right;
+         font-family: Verdana;
+        text-transform: uppercase;
+        outline: 0;
+         background: #ff3300;
+        border-radius: 5px;
+        width: 100px;
+        height: 30px;
+        border: 0;
+        color: #FFFFFF;
+        font-size: 14px;
+        -webkit-transition: all 0.3 ease;
+        transition: all 0.3 ease;
+        cursor: pointer;
+    
+}
+.funkyradio div {
+  clear: both;
+  overflow: hidden;
+}
+
+.funkyradio label {
+  width: 100%;
+  border-radius: 2px;
+  border: 1px solid #D1D3D4;
+  font-weight: normal;
+}
+
+
+.funkyradio input[type="radio"]:empty {
+  display: none;
+}
+
+
+.funkyradio input[type="radio"]:empty ~ label {
+  position: relative;
+  line-height: 2.5em;
+  text-indent: 3.25em;
+  margin-top: .5em;
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+
+.funkyradio input[type="radio"]:empty ~ label:before {
+  position: absolute;
+  display: block;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  content: '';
+  width: 2.5em;
+  background: #D1D3D4;
+  border-radius: 3px 0 0 3px;
+}
+
+
+.funkyradio input[type="radio"]:hover:not(:checked) ~ label {
+  color: #888;
+}
+
+
+.funkyradio input[type="radio"]:hover:not(:checked) ~ label:before {
+  content: '\2714';
+  text-indent: .9em;
+  color: #C2C2C2;
+}
+
+
+.funkyradio input[type="radio"] :checked~ label {
+  color: #777;
+}
+
+
+.funkyradio input[type="radio"]:checked ~ label:before {
+  content: '\2714';
+  text-indent: .9em;
+  color: #333;
+  background-color: #ccc;
+}
+
+
+.funkyradio input[type="radio"]:focus:checked ~ label:before {
+  box-shadow: 0 0 0 3px #999;
+}
+
+
+.funkyradio-default input[type="radio"]:checked ~ label:before {
+  color: #333;
+  background-color: red;
+}
+
+
+.funkyradio-primary input[type="radio"]:checked ~ label:before {
+  color: #fff;
+  background-color: #337ab7;
+}
+
+
+.funkyradio-success input[type="radio"]:checked ~ label:before {
+  color: #fff;
+  background-color: #5cb85c;
+}
+
+
+.funkyradio-danger input[type="radio"]:checked ~ label:before {
+  color: #fff;
+  background-color: #d9534f;
+}
+
+
+.funkyradio-warning input[type="radio"]:checked ~ label:before {
+  color: #fff;
+  background-color: #f0ad4e;
+}
+
+
+body {
+    background-color: aliceblue;
+            
+}
+      
+        h4 { 
+            text-align: center 
+        }
+        
+        
+list-group-item:
+            {
+       
+align: center;
+}
+        .profile-img
+{
+    width: 96px;
+    height: 96px;
+    margin: 0 auto 10px;
+    display: block;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+}
+          
+
+
+        
+        
+ </style>
+ </head>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/js/bootstrap.min.js" integrity="sha384-vZ2WRJMwsjRMW/8U7i6PWi6AlO1L79snBrmgiDpgIWJ82z8eA5lenwvxbMV1PAh7" crossorigin="anonymous"></script>
+</body>
+</html>
